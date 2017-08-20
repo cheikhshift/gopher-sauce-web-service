@@ -49,6 +49,8 @@ Create a new `service.go` file in your project directory.
 4. Display the current value of the counter :
 
 		w.Write([]byte(fmt.Sprintf("This is the %v request", Counter) ))
-	
+## Notes
+- Within `end` tags the variables r & w are available by default. `r` is the standard Go `http.request` ( More [info](https://golang.org/pkg/net/http/#Request) ). `w` is the standard Go `http.ResponeWriter` ( More [info](https://golang.org/pkg/net/http/#ResponseWriter) )
+
 ## Test service
 Run `gos --run` and visit : [localhost:8080/service](localhost:8080/service)	
